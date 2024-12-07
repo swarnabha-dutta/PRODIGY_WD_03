@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic-Tac-Toe Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="game-container">
+        <header>
+            <h1>Tic-Tac-Toe</h1>
+        </header>
+        
+        <div class="game-mode-selection">
+            <h2>Select Game Mode</h2>
+            <div class="mode-buttons">
+                <button id="two-player-mode">Two Player</button>
+                <button id="ai-mode">Play vs AI</button>
+            </div>
+        </div>
+
+        <div class="game-section" id="gameSection" style="display: none;">
+            <div class="player-info">
+                <div class="player player-x">
+                    <span class="player-label">Player X</span>
+                    <span class="player-score" id="playerXScore">0</span>
+                </div>
+                <div class="player player-o">
+                    <span class="player-label">Player O</span>
+                    <span class="player-score" id="playerOScore">0</span>
+                </div>
+            </div>
+
+            <div class="status-container">
+                <div id="gameStatus">Select a Game Mode</div>
+            </div>
+
+            <div id="gameBoard" class="game-board">
+                <div class="board-cell" data-index="0"></div>
+                <div class="board-cell" data-index="1"></div>
+                <div class="board-cell" data-index="2"></div>
+                <div class="board-cell" data-index="3"></div>
+                <div class="board-cell" data-index="4"></div>
+                <div class="board-cell" data-index="5"></div>
+                <div class="board-cell" data-index="6"></div>
+                <div class="board-cell" data-index="7"></div>
+                <div class="board-cell" data-index="8"></div>
+            </div>
+
+            <div class="game-controls">
+                <button id="resetButton">Reset Game</button>
+                <button id="changeModeButton">Change Mode</button>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="game.js"></script>
+    <script type="module" src="game-board.js"></script>
+    <script type="module" src="ai-player.js"></script>
+</body>
+</html>
